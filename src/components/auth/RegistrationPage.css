@@ -1,0 +1,134 @@
+.registration-page {
+    background: #fff; /* Change from gradient to solid (or adjust as needed) */
+  }
+  
+  .registration-container {
+    max-width: 400px;
+    margin: 50px auto; /* Add centering margin */
+    padding: 2.5rem; /* Match UpdateUser padding */
+    background: linear-gradient(45deg, #F8F1FF 0%, #A3B8FF 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(142, 68, 173, 0.1);
+    animation: fadeIn 0.8s ease-out, floating 4s ease-in-out infinite;
+  }
+  
+  /* Remove overlay styles */
+  .overlay {
+    display: none;
+  }
+  
+  .registration-form {
+    background: transparent !important; /* Remove white background */
+    box-shadow: none;
+    padding: 0;
+    animation: none;
+  }
+  .registration-form h2 {
+    color: #8E44AD;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    /* Remove text-shadow if present */
+  }
+  .button-container {
+    margin-top: 1.5rem;
+  }
+
+  /* Remove this if exists */
+.registration-form:hover {
+    animation-play-state: paused;
+  }
+  .error-message {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #8E44AD;
+  }
+ /* Keyframe animations, similar to login/registration theme */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  @keyframes buttonGlow {
+    from { box-shadow: 0 0 10px rgba(142, 68, 173, 0.2); }
+    to { box-shadow: 0 0 20px rgba(142, 68, 173, 0.4); }
+  }
+  
+  @keyframes buttonPulse {
+    from { transform: translateY(-2px) scale(1); }
+    to { transform: translateY(-2px) scale(1.02); }
+  }
+  
+  @keyframes buttonShine {
+    from { transform: translateX(-50%) rotate(45deg); }
+    to { transform: translateX(150%) rotate(45deg); }
+  }
+    /* Button container */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+      }
+      
+      /* Update button styling, similar to login/register buttons */
+      .register-button {
+        padding: 0.8rem 1.5rem;
+        background: linear-gradient(135deg, #8E44AD 0%, #A3B8FF 100%);
+        color: white;
+        border: 2px solid #A3B8FF;
+        border-radius: 50px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        animation: buttonGlow 2s infinite alternate;
+        min-width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+      }
+      
+      .register-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 25px rgba(142, 68, 173, 0.4);
+        animation: buttonPulse 0.6s infinite alternate;
+      }
+      
+      .register-button::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent 25%,
+          rgba(255, 255, 255, 0.1) 50%,
+          transparent 75%
+        );
+        animation: buttonShine 3s infinite linear;
+        border-radius: 50px;
+      }
+      .registration-form select {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #E3E3E3;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: #F8F1FF;
+      }
+      .registration-form select:focus {
+        outline: none;
+        border-color: #A3B8FF;
+        box-shadow: 0 0 0 3px rgba(163, 184, 255, 0.2);
+      }
+      
+ 
